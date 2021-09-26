@@ -4,7 +4,7 @@ describe 'Forecast API' do
   describe 'GET forecast', :vcr do
     it 'returns the forecast for a specific location' do
       headers = { 'CONTENT_TYPE' => 'application/json' }
-      get '/api/v1/forecast?location=centennial,co'#, headers: headers
+      get '/api/v1/forecast?location=centennial,co', headers: headers
 
       expect(response).to be_successful
 
