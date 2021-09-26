@@ -17,7 +17,7 @@ describe 'Users' do
 
       user = JSON.parse(response.body, symbolize_names: true)[:data]
 
-      expect(user[:id]).to eq("1")
+      expect(user).to have_key(:id)
       expect(user[:type]).to eq('users')
       expect(user[:attributes]).to have_key(:email)
       expect(user[:attributes]).to have_key(:api_key)
