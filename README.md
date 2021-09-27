@@ -145,12 +145,12 @@ Project Link: [Whether, Sweater?](https://github.com/amcguire17/whether_sweater)
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/amcguire17/whether_sweater.svg?style=for-the-badge
-[contributors-url]: https://github.com/amcguire17/wether_sweater
-[forks-shield]: https://img.shields.io/github/forks/amcguire17/wether_sweater.svg?style=for-the-badge
-[forks-url]: https://github.com/amcguire17/wether_sweater/network/members
-[stars-shield]: https://img.shields.io/github/stars/amcguire17/wether_sweater.svg?style=for-the-badge
-[stars-url]: https://github.com/amcguire17/wether_sweater/stargazers
-[issues-shield]: https://img.shields.io/github/issues/amcguire17/wether_sweater.svg?style=for-the-badge
-[issues-url]: https://github.com/amcguire17/wether_sweater/issues
+[contributors-url]: https://github.com/amcguire17/whether_sweater
+[forks-shield]: https://img.shields.io/github/forks/amcguire17/whether_sweater.svg?style=for-the-badge
+[forks-url]: https://github.com/amcguire17/whether_sweater/network/members
+[stars-shield]: https://img.shields.io/github/stars/amcguire17/whether_sweater.svg?style=for-the-badge
+[stars-url]: https://github.com/amcguire17/whether_sweater/stargazers
+[issues-shield]: https://img.shields.io/github/issues/amcguire17/whether_sweater.svg?style=for-the-badge
+[issues-url]: https://github.com/amcguire17/whether_sweater/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/amanda-e-mcguire/
