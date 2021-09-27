@@ -2,7 +2,7 @@ class RoadtripSerializer
   def self.format_data(road_trip)
     {
       "data": {
-        "id": "nil",
+        "id": road_trip.id,
         "type": 'roadtrip',
         "attributes": {
           "start_city": road_trip.start_city,

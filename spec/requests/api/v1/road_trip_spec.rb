@@ -20,7 +20,7 @@ describe 'Road Trip' do
 
       road_trip = JSON.parse(response.body, symbolize_names: true)[:data]
 
-      expect(road_trip[:id]).to eq("nil")
+      expect(road_trip[:id]).to eq(nil)
       expect(road_trip[:type]).to eq('roadtrip')
       expect(road_trip[:attributes]).to have_key(:start_city)
       expect(road_trip[:attributes]).to have_key(:end_city)
