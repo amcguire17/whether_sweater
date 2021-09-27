@@ -13,7 +13,6 @@ class MapquestService
       req.params['key'] = ENV['MAPQUEST_KEY']
       req.params['from'] = "#{start_location}"
       req.params['to'] = "#{end_location}"
-
       req.headers['Content-Type'] = 'application/json'
     end
     JSON.parse(response.body, symbolize_names: true)
