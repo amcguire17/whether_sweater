@@ -24,6 +24,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#endpoints">Endpoints</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -54,6 +55,15 @@ Learning Goals:
 * Determine completion criteria based on the needs of other developers
 * Research, select, and consume an API based on your needs as a developer
 
+### Endpoints
+
+| route | description |
+|-------|-------------|
+| GET /api/v1/forecast?location=LOCATION | Get forecast information for a specific location |
+| GET /api/v1/backgrounds?location=LOCATION | Get a background image for a specific location |
+| POST /api/v1/users | Enter email, password, and password confirmation to create a new user |
+| POST /api/v1/sessions | Return user along with api key from login information |
+| POST /api/v1/road_trip | Enter origin and destination to receive road trip information |
 
 ### Built With
 
@@ -129,7 +139,7 @@ This project requires Ruby 2.7.2.
 
 [Amanda McGuire](https://github.com/amcguire17)
 
-Project Link: [Rails Engine](https://github.com/amcguire17/whether_sweater)
+Project Link: [Whether, Sweater?](https://github.com/amcguire17/whether_sweater)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
