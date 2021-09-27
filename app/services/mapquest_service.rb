@@ -1,11 +1,11 @@
-class MapquestService
+class MapquestService < ApiService
   def self.geocoding(address)
     response = Faraday.get('https://www.mapquestapi.com/geocoding/v1/address') do |req|
       req.params['key'] = ENV['MAPQUEST_KEY']
-      req.params['location'] = "#{address}"
+      req.params['location'] = address
       req.headers['Content-Type'] = 'application/json'
     end
-    JSON.parse(response.body, symbolize_names: true)
+    format_json(response)
   end
 
   def self.directions(start_location, end_location)
@@ -15,6 +15,6 @@ class MapquestService
       req.params['to'] = "#{end_location}"
       req.headers['Content-Type'] = 'application/json'
     end
-    JSON.parse(response.body, symbolize_names: true)
+    format_json(response)
   end
 end

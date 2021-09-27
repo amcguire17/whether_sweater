@@ -21,11 +21,11 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 25 Sep 2021 21:37:28 GMT
+      - Mon, 27 Sep 2021 21:30:22 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '1048'
+      - '1051'
       Access-Control-Allow-Methods:
       - OPTIONS,GET,POST
       Access-Control-Allow-Origin:
@@ -37,13 +37,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Sat, 25 Sep 2021 21:37:28 GMT
+      - Mon, 27 Sep 2021 21:30:22 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=4006F88858771B32DB70BABFB0636647; Path=/; HttpOnly; Secure
+      - JSESSIONID=66F53153C0BAA929D24EEF551D428753; Path=/; HttpOnly; Secure
       Status:
       - success
       Transactionweight:
@@ -55,6 +55,6 @@ http_interactions:
       string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2021 MapQuest,
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
         2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"anchorage,ak"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Anchorage","adminArea5Type":"City","adminArea4":"Municipality
-        of Anchorage","adminArea4Type":"County","adminArea3":"AK","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282039478","unknownInput":"","type":"s","latLng":{"lat":61.216583,"lng":-149.899597},"displayLatLng":{"lat":61.216583,"lng":-149.899597},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=7Pqs8QUfOAcUx5Vffw66M6D1AU4NvbXX&type=map&size=225,160&locations=61.216583,-149.899597|marker-sm-50318A-1&scalebar=true&zoom=12&rand=21457353"}]}]}'
-  recorded_at: Sat, 25 Sep 2021 21:37:28 GMT
+        of Anchorage","adminArea4Type":"County","adminArea3":"AK","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282039478","unknownInput":"","type":"s","latLng":{"lat":61.216583,"lng":-149.899597},"displayLatLng":{"lat":61.216583,"lng":-149.899597},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=7Pqs8QUfOAcUx5Vffw66M6D1AU4NvbXX&type=map&size=225,160&locations=61.216583,-149.899597|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-1768433602"}]}]}'
+  recorded_at: Mon, 27 Sep 2021 21:30:22 GMT
 recorded_with: VCR 6.0.0
