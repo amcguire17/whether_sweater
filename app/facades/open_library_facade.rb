@@ -5,6 +5,6 @@ class OpenLibraryFacade
     books = response[:docs].first(quantity.to_i).map do |book|
       Book.new(book)
     end
-    book_info = [books, book_count]
+    [books, book_count]
   end
 end
