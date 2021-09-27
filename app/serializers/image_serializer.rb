@@ -1,8 +1,8 @@
 class ImageSerializer
-  def self.format_data(id, image)
+  def self.format_data(image)
     {
       "data": {
-        "id": id,
+        "id": image.id,
         "type": 'image',
         "attributes": {
           "image": {
