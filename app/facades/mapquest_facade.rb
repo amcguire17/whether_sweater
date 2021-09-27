@@ -9,6 +9,6 @@ class MapquestFacade
     destination_coordinates = coordinates(destination)
     weather = OpenWeatherService.weather_info(destination_coordinates)
     directions = MapquestService.directions(origin, destination)
-    RoadTrip.new(weather, directions)
+    RoadTrip.new(origin, destination, weather, directions)
   end
 end

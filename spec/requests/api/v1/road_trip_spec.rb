@@ -18,17 +18,17 @@ describe 'Road Trip' do
       expect(response).to be_successful
       expect(response.status).to eq(200)
 
-      user = JSON.parse(response.body, symbolize_names: true)[:data]
-      binding.pry
-      expect(user[:id]).to have_key(nil)
-      expect(user[:type]).to eq('roadtrip')
-      expect(user[:attributes]).to have_key(:start_city)
-      expect(user[:attributes]).to have_key(:end_city)
-      expect(user[:attributes]).to have_key(:travel_time)
-      expect(user[:attributes]).to have_key(:weather_at_eta)
-      expect(user[:attributes]).to have_key(:weather_at_eta)
-      expect(user[:attributes][:weather_at_eta]).to have_key(:temperature)
-      expect(user[:attributes][:weather_at_eta]).to have_key(:conditions)
+      road_trip = JSON.parse(response.body, symbolize_names: true)[:data]
+
+      expect(road_trip[:id]).to eq("nil")
+      expect(road_trip[:type]).to eq('roadtrip')
+      expect(road_trip[:attributes]).to have_key(:start_city)
+      expect(road_trip[:attributes]).to have_key(:end_city)
+      expect(road_trip[:attributes]).to have_key(:travel_time)
+      expect(road_trip[:attributes]).to have_key(:weather_at_eta)
+      expect(road_trip[:attributes]).to have_key(:weather_at_eta)
+      expect(road_trip[:attributes][:weather_at_eta]).to have_key(:temperature)
+      expect(road_trip[:attributes][:weather_at_eta]).to have_key(:conditions)
     end
 
     it 'returns an error if api key is incorrect' do
@@ -44,8 +44,8 @@ describe 'Road Trip' do
       expect(response).to_not be_successful
       expect(response.status).to eq(401)
 
-      user = JSON.parse(response.body, symbolize_names: true)
-      expect(user[:message]).to eq("Authentication failed.")
+      road_trip = JSON.parse(response.body, symbolize_names: true)
+      expect(road_trip[:message]).to eq("Authentication failed.")
     end
 
     it 'returns impossible if route is not valid' do
@@ -58,13 +58,13 @@ describe 'Road Trip' do
 
       post "/api/v1/road_trip", headers: headers, params: JSON.generate(post_params)
 
-      expect(response).to_not be_successful
+      expect(response).to be_successful
 
-      user = JSON.parse(response.body, symbolize_names: true)
+      road_trip = JSON.parse(response.body, symbolize_names: true)[:data]
 
-      expect(user[:attributes][:travel_time]).to eq("impossible")
-      expect(user[:attributes][:weather_at_eta][:temperature]).to eq(nil)
-      expect(user[:attributes][:weather_at_eta][:conditions]).to eq(nil)
+      expect(road_trip[:attributes][:travel_time]).to eq("impossible")
+      expect(road_trip[:attributes][:weather_at_eta][:temperature]).to eq(nil)
+      expect(road_trip[:attributes][:weather_at_eta][:conditions]).to eq(nil)
     end
   end
 end
