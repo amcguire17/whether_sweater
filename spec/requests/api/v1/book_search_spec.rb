@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Book Search API' do
+describe 'Book Search API', :vcr do
   describe 'get books' do
     it 'returns books based on destination' do
       headers = { 'CONTENT_TYPE' => 'application/json' }
