@@ -3,7 +3,7 @@ class Book
 
   def initialize(book_info)
     @title = book_info[:title]
-    @publisher = book_info[:publisher].first
+    @publisher = book_info[:publisher].first unless book_info[:publisher].nil?
     @isbn = find_isbn(book_info[:isbn]) unless book_info[:isbn].nil?
   end
 

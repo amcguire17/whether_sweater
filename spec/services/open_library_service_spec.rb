@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe OpenLibraryService, :vcr do
   it 'returns book information for a location' do
-    response = OpenLibraryService.weather_info('cheyenne,wy')
+    response = OpenLibraryService.book_info('cheyenne,wy')
 
     expect(response).to be_a(Hash)
     expect(response).to have_key(:numFound)
