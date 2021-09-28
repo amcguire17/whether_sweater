@@ -66,5 +66,24 @@ describe 'Road Trip' do
       expect(road_trip[:attributes][:weather_at_eta][:temperature]).to eq(nil)
       expect(road_trip[:attributes][:weather_at_eta][:conditions]).to eq(nil)
     end
+
+    it 'returns no weather information if route is longer than 48 hours' do
+      post_params = {
+        origin: "Denver, CO",
+        destination: "Anchorage, AK",
+        api_key: "#{@user.api_key}"
+      }
+      headers = {"CONTENT_TYPE" => "application/json"}
+
+      post "/api/v1/road_trip", headers: headers, params: JSON.generate(post_params)
+
+      expect(response).to be_successful
+
+      road_trip = JSON.parse(response.body, symbolize_names: true)[:data]
+
+      expect(road_trip[:attributes][:travel_time]).to eq("51 hours, 40 minutes")
+      expect(road_trip[:attributes][:weather_at_eta][:temperature]).to eq(nil)
+      expect(road_trip[:attributes][:weather_at_eta][:conditions]).to eq(nil)
+    end
   end
 end

@@ -8,6 +8,10 @@ class RoadtripFacade
   def self.destination_weather(location, time)
     coordinates = ForecastFacade.coordinates(location)
     weather = OpenWeatherService.weather_info(coordinates)
-    HourlyWeather.new(weather[:hourly][time])
+    if time < 48
+      HourlyWeather.new(weather[:hourly][time])
+    else
+      HourlyWeather.new({info: {}})
+    end
   end
 end
