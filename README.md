@@ -60,7 +60,7 @@ Learning Goals:
 | route | description |
 |-------|-------------|
 | GET /api/v1/forecast?location=LOCATION | Get forecast information for a specific location |
-| GET /api/v1/backgrounds?location=LOCATION | Get a background image for a specific location |
+| GET /api/v1/background?location=LOCATION | Get a background image for a specific location |
 | POST /api/v1/users | Enter email, password, and password confirmation to create a new user |
 | POST /api/v1/sessions | Return user along with api key from login information |
 | POST /api/v1/road_trip | Enter origin and destination to receive road trip information |
