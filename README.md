@@ -32,7 +32,9 @@
       <a href="#setup">Setup</a>
       <ul>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#project_configurations">Project Configurations</a></li>
+        <li><a href="#project_configurations">Project Configurations</
+        a></li>
+        <li><a href="#api_keys">API Keys</a></li>
       </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
@@ -133,6 +135,29 @@ This project requires Ruby 2.7.2.
     Use Ctrl-C to stop
 
     ```
+
+#### API Keys
+* MapQuest API
+  1. [MapQuest Developer Page](https://developer.mapquest.com/)
+  1. Click Sign Up in Navigation menu
+  1. Fill in information to create account
+  1. Redirects to a page with a section for My Keys
+  1. Install Figaro gem
+  1. Add key to config/application.yml as the value for MAPQUEST_KEY
+
+* OpenWeather API
+  1. [OpenWeather Sign Up Page](https://home.openweathermap.org/users/sign_up)
+  1. Fill in information to create account
+  1. Redirects to a page with to view API key
+  1. Make sure Figaro has been installed
+  1. Add key to config/application.yml as the value for OPENWEATHER_KEY
+
+* Unsplash API
+  1. [Unsplash Registration](https://unsplash.com/join)
+  1. Fill in information to create account
+  1. Add new application
+  1. Make sure Figaro has been installed
+  1. Add Access key to config/application.yml as the value for UNSPLASH_KEY
 
 <!-- CONTACT -->
 ## Contact
