@@ -6,9 +6,9 @@ default: &default
 
 development:
   <<: *default
-  database: "tikiarte_be_development"
+  database: "whether_sweater_development"
 
 test:
   <<: *default
   user: postgres
-  database: "tikiarte_be_test"
+  database: "whether_sweater_test"
