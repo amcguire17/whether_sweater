@@ -16,7 +16,7 @@ describe RoadtripFacade, :vcr do
     response = RoadtripFacade.destination_weather('whittier,ak', 1)
 
     expect(response).to be_a(HourlyWeather)
-    expect(response.time).to eq("15:00:00")
+    expect(response.time).to eq("21:00:00")
     expect(response.temperature).to eq(42.44)
     expect(response.conditions).to eq("light snow")
     expect(response.icon).to eq("13d")

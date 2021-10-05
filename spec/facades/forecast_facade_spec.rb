@@ -38,7 +38,7 @@ describe ForecastFacade, :vcr do
     expect(response.second.first.icon).to eq("04d")
 
     expect(response.third.count).to eq(8)
-    expect(response.third.first.time).to eq("14:00:00")
+    expect(response.third.first.time).to eq("20:00:00")
     expect(response.third.first.temperature).to eq(40.41)
     expect(response.third.first.conditions).to eq("overcast clouds")
     expect(response.third.first.icon).to eq("04d")
