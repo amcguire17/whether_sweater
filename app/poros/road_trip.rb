@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RoadTrip
   attr_reader :id, :start_city, :end_city, :travel_time, :temperature, :conditions
 
@@ -6,13 +8,13 @@ class RoadTrip
     @start_city = origin
     @end_city = destination
     @travel_time = format_time(directions_info[:route][:formattedTime], directions_info[:info][:messages])
-    @temperature = weather_info.temperature unless !directions_info[:info][:messages].empty?
-    @conditions = weather_info.conditions unless !directions_info[:info][:messages].empty?
+    @temperature = weather_info.temperature if directions_info[:info][:messages].empty?
+    @conditions = weather_info.conditions if directions_info[:info][:messages].empty?
   end
 
   def format_time(time, message)
     if message.empty?
-      array = time.split(":")
+      array = time.split(':')
       "#{array[0]} hours, #{array[1]} minutes"
     else
       'impossible'

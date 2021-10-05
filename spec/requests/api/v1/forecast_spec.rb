@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'Forecast API' do
@@ -29,7 +31,6 @@ describe 'Forecast API' do
       expect(forecast[:attributes][:current_weather]).to_not have_key(:pressure)
       expect(forecast[:attributes][:current_weather]).to_not have_key(:clouds)
       expect(forecast[:attributes][:current_weather]).to_not have_key(:rain)
-
 
       expect(forecast[:attributes][:daily_weather].count).to eq(5)
       forecast[:attributes][:daily_weather].each do |day|

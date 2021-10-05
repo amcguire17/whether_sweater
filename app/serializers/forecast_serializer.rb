@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ForecastSerializer
   def self.format_data(current, daily, hourly)
     {
@@ -15,7 +17,7 @@ class ForecastSerializer
             "uvi": current.uvi,
             "visibility": current.visibility,
             "conditions": current.conditions,
-            "icon": current.icon,
+            "icon": current.icon
           },
           "daily_weather": map_daily(daily),
           "hourly_weather": map_hourly(hourly)
@@ -37,6 +39,7 @@ class ForecastSerializer
       }
     end
   end
+
   def self.map_hourly(hourly)
     hourly.map do |hour|
       {

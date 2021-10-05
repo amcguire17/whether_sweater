@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RoadtripFacade
   def self.road_trip_info(origin, destination)
     directions = MapquestService.directions(origin, destination)
@@ -11,7 +13,7 @@ class RoadtripFacade
     if time < 48
       HourlyWeather.new(weather[:hourly][time])
     else
-      HourlyWeather.new({info: {}})
+      HourlyWeather.new({ info: {} })
     end
   end
 end

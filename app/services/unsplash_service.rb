@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UnsplashService < ApiService
   def self.image(location)
     response = Faraday.get('https://api.unsplash.com/search/photos') do |req|

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   validates :email, uniqueness: true, presence: true
   validates :password, presence: true
@@ -6,6 +8,6 @@ class User < ApplicationRecord
   has_secure_password
 
   before_create do
-    self.api_key =  SecureRandom.hex(20)
+    self.api_key = SecureRandom.hex(20)
   end
 end

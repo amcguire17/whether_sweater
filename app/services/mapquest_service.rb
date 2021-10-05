@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MapquestService < ApiService
   def self.geocoding(address)
     response = Faraday.get('https://www.mapquestapi.com/geocoding/v1/address') do |req|

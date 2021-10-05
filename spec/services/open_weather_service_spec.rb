@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe OpenWeatherService, :vcr do
   it 'returns weather information for coordinates' do
-    coordinates = Coordinate.new({:latLng=>{:lat=>61.216583, :lng=>-149.899597}})
+    coordinates = Coordinate.new({ latLng: { lat: 61.216583, lng: -149.899597 } })
     response = OpenWeatherService.weather_info(coordinates)
 
     expect(response).to be_a(Hash)

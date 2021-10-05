@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 class CurrentWeather
-  attr_reader :id, :datetime, :sunrise, :sunset, :temperature, :feels_like, :humidity, :uvi, :visibility, :conditions, :icon
+  attr_reader :id, :datetime, :sunrise, :sunset, :temperature, :feels_like, :humidity, :uvi, :visibility, :conditions,
+              :icon
 
   def initialize(info)
     @id = nil
