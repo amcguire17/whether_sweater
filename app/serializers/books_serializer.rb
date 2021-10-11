@@ -7,8 +7,8 @@ class BooksSerializer
         "attributes": {
           "destination": "#{location}",
           "forecast": {
-            "summary": "#{weather[:current][:weather].first[:description]}",
-            "temperature": "#{weather[:current][:temp]} F"
+            "summary": "#{weather.first.conditions}",
+            "temperature": "#{weather.first.temperature} F"
           },
           "total_books_found": books.second,
           "books": map_books(books)

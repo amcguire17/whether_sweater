@@ -2,8 +2,7 @@ class Api::V1::BookSearchController < ApplicationController
   def index
     if params[:location].present? && params[:quantity].present?
       if params[:quantity].to_i > 0
-        coordinates = MapquestFacade.coordinates(params[:location])
-        weather = OpenWeatherService.weather_info(coordinates)
+        weather = ForecastFacade.weather(params[:location])
         books = OpenLibraryFacade.books(params[:location], params[:quantity])
         render json: BooksSerializer.format_data(books, weather, params[:location])
       else
