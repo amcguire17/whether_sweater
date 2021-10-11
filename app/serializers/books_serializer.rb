@@ -2,12 +2,12 @@ class BooksSerializer
   def self.format_data(books, weather, location)
     {
       "data": {
-        "id": "nil",
-        "type": "books",
+        "id": 'nil',
+        "type": 'books',
         "attributes": {
-          "destination": "#{location}",
+          "destination": location.to_s,
           "forecast": {
-            "summary": "#{weather.first.conditions}",
+            "summary": weather.first.conditions.to_s,
             "temperature": "#{weather.first.temperature} F"
           },
           "total_books_found": books.second,
