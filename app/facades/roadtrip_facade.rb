@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class RoadtripFacade
   def self.road_trip_info(origin, destination)
     directions = MapquestService.directions(origin, destination)

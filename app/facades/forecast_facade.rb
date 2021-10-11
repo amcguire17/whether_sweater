@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class ForecastFacade
   def self.coordinates(location)
     response = MapquestService.geocoding(location)

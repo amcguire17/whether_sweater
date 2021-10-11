@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Image
   attr_reader :id, :location, :url, :source, :author, :author_url
 

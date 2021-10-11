@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class ForecastSerializer
   def self.format_data(current, daily, hourly)
     {

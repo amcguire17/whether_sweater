@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class ImageSerializer
   def self.format_data(image)
     {

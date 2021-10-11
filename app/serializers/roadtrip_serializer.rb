@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class RoadtripSerializer
   def self.format_data(road_trip)
     {

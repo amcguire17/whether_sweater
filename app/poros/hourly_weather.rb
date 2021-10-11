@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class HourlyWeather
   attr_reader :time, :temperature, :conditions, :icon
 
